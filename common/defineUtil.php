@@ -15,9 +15,11 @@ const BUY_CONFIRM = "buy_confirm.php";
 const BUY_COMPLETE = "buy_complete.php";
 
 const MY_DATA = "my_data.php";
-const MY_DATA_UPDATE="my_data_update.php";
-const MY_DATA_UP_RESULT="";
-
+const MY_DATA_UPDATE="my_update.php";
+const MY_DATA_UP_CONFIRM = "update_confirm.php";
+const MY_DATA_UP_RESULT="my_update_result.php";
+const MY_DATA_DELETE ="my_delete.php";
+const MY_DATA_DELETE_RESULT ="my_delete_result.php";
 
 const REGISTRATION ="registration.php";
 const REGISTRATION_COMFIRM ="registration_confirm.php";

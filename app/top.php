@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once("../common/defineUtil.php");
 require_once("../common/scriptUtil.php");
 
@@ -13,6 +14,7 @@ require_once("../common/scriptUtil.php");
 </head>
 <body>
     <h1>かごいっぱいの夢 商品を検索する</h1>
+    <?php var_dump($_SESSION['user']); ?>
     <p>買いたい商品を選んで商品の合計額を確認し、買い物のシュミレーションができます。<br></p>
     <p>※実際に買うことはできません</p>
 
@@ -35,8 +37,16 @@ require_once("../common/scriptUtil.php");
 
     <h2><a href="<?php echo REGISTRATION;?>">新規会員登録はこちら</a></h2><br>
 
-    <h3><a href="<?php echo LOGIN;?>">ログイン</a></h3>
-
+    <h3><a href="<?php echo LOGIN;?>"><?php
+    if(isset($_SESSION['user'])){
+        echo  'ログアウト';
+    }else{
+        echo 'ログイン';
+    }
+     ?></a></h3>
+     <?php if(isset($_SESSION['user'])){?>
+        <a href="<?php echo MY_DATA ?>">マイページ</a>
+     <?php } ?>
             </form>
 
     <!-- Begin Yahoo! JAPAN Web Services Attribution Snippet -->

@@ -2,7 +2,13 @@
 session_start();
 require_once("../common/defineUtil.php");
 require_once("../common/scriptUtil.php");
+require_once("../common/dbaccessUtil.php");
+
+Insert_user_t($_SESSION['register']);
+
+
 //REGISTRATION_COMFIRM
+
 
 
 ?>
